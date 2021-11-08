@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Login from './pages/Login';
-import Book from './pages/Book';
+import Books from './pages/Books';
+import NewBook from './pages/NewBook';
 
 export default function Routes() {
   return (
@@ -11,7 +12,8 @@ export default function Routes() {
       {/* garantir que não vai mais de uma rota aberta ao mesmo tempo */}
       <Switch>
         <Route path="/" exact component={Login}/>
-        <Route path="/book" component={Book}/>
+        <Route path="/books" component={Books}/>
+        <Route path="/book/new" component={NewBook}/>
       </Switch>
     </BrowserRouter>
   );
