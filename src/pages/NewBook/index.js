@@ -47,7 +47,7 @@ export default function NewBook() {
     useEffect(() => {
         if (bookId === '0') return;
         else loadBook();
-    }, bookId);
+    }, [bookId], [loadBook]);
 
     async function saveOrUpdate(e) {
         e.preventDefault();
