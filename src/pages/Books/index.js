@@ -31,7 +31,7 @@ export default function Books() {
 
   useEffect(() => {
     fetchMoreBooks();
-  }, [accessToken], [fetchMoreBooks]);
+  }, [page, authorization, books]);
 
   async function deleteBook(id, title) {
     try {
