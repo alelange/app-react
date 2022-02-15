@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/2ff38604-7b24-4217-8d77-7557abeb9a9c/resourceGroups/lange-client-rg/providers/Microsoft.Web/sites/lange-client"
+}

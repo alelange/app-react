@@ -23,15 +23,15 @@ export default function Books() {
 
   const history = useHistory();
 
-  useEffect(() => {
-    fetchMoreBooks();
-  }, [accessToken]);
-
   async function fetchMoreBooks() {
     const response = await api.get(`api/v1/Book/asc/4/${page}`, authorization);
     setBooks([ ...books, ...response.data.list]);
     setPage(page + 1);
   }
+
+  useEffect(() => {
+    fetchMoreBooks();
+  }, [accessToken]);
 
   async function deleteBook(id, title) {
     try {

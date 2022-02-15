@@ -27,11 +27,6 @@ export default function NewBook() {
         }
     };
 
-    useEffect(() => {
-        if (bookId === '0') return;
-        else loadBook();
-    }, bookId);
-
     async function loadBook(e) {
         try {
             const response = await api.get(`api/v1/Book/${bookId}`, authorization);
@@ -48,6 +43,11 @@ export default function NewBook() {
             history.push('/books');
         }
     }
+
+    useEffect(() => {
+        if (bookId === '0') return;
+        else loadBook();
+    }, bookId);
 
     async function saveOrUpdate(e) {
         e.preventDefault();
